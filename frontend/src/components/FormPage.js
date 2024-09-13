@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import logo from "../Assets/logo1.png";
 import axios from 'axios';
 
@@ -10,6 +10,7 @@ const FormPage = () => {
     answer11: [], answer12: [], answer13: []
   });
 
+  const nav = useNavigate();
   const handleOptionChange = (e) => {
     const { name, value, type } = e.target;
 
@@ -36,6 +37,9 @@ const FormPage = () => {
 
     axios.post('api/survey/questions', formData)
       .then((res) => {
+        alert('Form Submitted');
+        nav('/');
+        
         console.log('Form submitted:', res.data);
       })
       .catch((err) => {
