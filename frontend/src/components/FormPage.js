@@ -11,6 +11,7 @@ const FormPage = () => {
   });
 
   const nav = useNavigate();
+
   const handleOptionChange = (e) => {
     const { name, value, type } = e.target;
 
@@ -37,10 +38,12 @@ const FormPage = () => {
 
     axios.post('api/survey/questions', formData)
       .then((res) => {
-        alert('Form Submitted');
-        nav('/');
-        
-        console.log('Form submitted:', res.data);
+        console.log(res.data.success);
+        if(res.data.success){
+            alert("Survey submitted successfully");
+            console.log('Form submitted:', res.data);
+            nav('/');
+        }
       })
       .catch((err) => {
         console.log('Error:', err);

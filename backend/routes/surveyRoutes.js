@@ -32,9 +32,9 @@ router.post('/questions', async (req, res) => {
             answer12,question13, answer13
         });
         await newQuestionSet.save();
-        res.status(201).json(newQuestionSet);
+        res.status(201).json({newQuestionSet,success:true});
     } catch (error) {
-        res.status(400).json({ error: error.message });
+        res.status(400).json({ error: error.message,success:false });
     }
 });
 
