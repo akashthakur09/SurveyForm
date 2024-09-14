@@ -241,23 +241,11 @@ const LandingPage = () => {
             </h1>
             <div className="my-5">
               <p className="text-black lg:text-lg sm:text-sm">
-                Connect with your personal therapist We are building an
-                AI-driven. We are building an AI-driven mental health care platform called
-                Mannmuktt. Your feedback  will help us understand how we can better serve your mental health
+                We are building an AI-driven mental health care platform called Mannmuktt. 
+                Your feedback  will help us understand how we can better serve your mental health
                 needs. Your answers are anonymous, and your time is greatly appreciated.
               </p>
-              {/* <p className="text-black lg:text-lg sm:text-sm">
-                building an AI-driven mental health care platform called
-                Mannmuktt. 
-              </p>
-              <p className="text-black lg:text-lg sm:text-sm">
-              Your feedback  will help us understand how we can better serve your mental health
-                needs.
-              </p>
-              <p className="text-black lg:text-lg sm:text-sm">
-                {" "}
-                Your answers are anonymous, and your time is greatly appreciated.
-              </p> */}
+              
             </div>
             
           </div>
