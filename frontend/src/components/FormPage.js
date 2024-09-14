@@ -36,7 +36,7 @@ const FormPage = () => {
     e.preventDefault();
     console.log(formData);
 
-    axios.post('https://localhost:5000/api/survey/questions', formData)
+    axios.post('api/survey/questions', formData)
       .then((res) => {
         console.log(res.data.success);
         if(res.data.success){
