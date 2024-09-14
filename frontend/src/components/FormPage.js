@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link,useNavigate } from "react-router-dom";
-import logo from "../Assets/logo1.png";
+import logo from "../Assets/logo.png";
 import axios from 'axios';
 
 const FormPage = () => {
@@ -36,7 +36,7 @@ const FormPage = () => {
     e.preventDefault();
     console.log(formData);
 
-    axios.post('api/survey/questions', formData)
+    axios.post('https://localhost:5000/api/survey/questions', formData)
       .then((res) => {
         console.log(res.data.success);
         if(res.data.success){
@@ -53,16 +53,16 @@ const FormPage = () => {
   return (
     <div >
         <div className="fixed flex items-center space-x-4 top-0 z-10">
-          <Link to='/'><img src={logo} alt="Logo" className="w-20 rounded-full m-2" /></Link>
+          <Link to='/'><img src={logo} alt="Logo" className="lg:w-20 sm:w-20 md:w-32 lg:rounded-full lg:m-2" /></Link>
         </div>
-    <div className='flex justify-center bg-[#073b4c] z-1 mt-[-8px] '>
+    <div className='flex justify-center bg-[#073b4c] lg:z-1 lg:mt-[-8px]'>
       
       {/* here in this div i want a image in backgound with color blend with green */}
 
 
-      <div className="bg-green-200 w-[600px] m-4">
-        <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-lg w-full">
-          <h2 className="text-2xl font-bold mb-6">Survey Form</h2>
+      <div className="lg:bg-green-200 lg:w-[600px] sm:w-[350px] md:w-[500px] lg:m-4">
+        <form onSubmit={handleSubmit} className="bg-white sm:p-4 sm:mt-16 lg:mt-0 lg:p-8 lg:rounded-lg lg:shadow-lg lg:w-full">
+          <h2 className="lg:text-2xl lg:font-bold lg:mb-6">Survey Form</h2>
 
           {/* Question 1 */}
           <div className="mb-6">
