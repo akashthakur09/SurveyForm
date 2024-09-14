@@ -38,8 +38,6 @@ const questionSchema = new mongoose.Schema({
     question12: { type: String, required: true },
     answer12: { type: Array, required: true },
 
-    question13: { type: String, required: true },
-    answer13: { type: Array, required: true },
 });
 
 const Questions = mongoose.model('Questions', questionSchema);

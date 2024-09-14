@@ -7,7 +7,7 @@ const FormPage = () => {
   const [formData, setFormData] = useState({
     answer1: [], answer2: [], answer3: [], answer4: [], answer5: [],
     answer6: [], answer7: [], answer8: [], answer9: [], answer10: [],
-    answer11: [], answer12: [], answer13: []
+    answer11: [], answer12: []
   });
 
   const nav = useNavigate();
@@ -297,25 +297,7 @@ const FormPage = () => {
             </div>
           </div>
 
-          {/* Question 13 */}
-          <div className="mb-6">
-            <label className="block text-gray-700 mb-4 font-semibold">13. If Mannmuktt offers these advanced features, how much would you be willing to pay monthly for full access?</label>
-            <div className="flex flex-col">
-              {['₹500-₹1000', '₹1000-₹2000', 'More than ₹2000','I prefer a free version with limited features'].map((option) => (
-                <label key={option} className="mb-2">
-                  <input
-                    type="radio"
-                    name="answer13"
-                    value={option}
-                    checked={formData.answer13.includes(option)}
-                    onChange={handleOptionChange}
-                    className="mr-2"
-                  />
-                  {option}
-                </label>
-              ))}
-            </div>
-          </div>
+          
 
           <button type="submit" className="bg-teal-500 text-white py-2 px-4 rounded-lg hover:bg-teal-600">Submit</button>
         </form>

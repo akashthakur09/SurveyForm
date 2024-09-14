@@ -20,16 +20,14 @@ router.post('/questions', async (req, res) => {
     const question10='Any additional thoughts or feedback about mental health platforms and how they can help you? (Open-ended response)'
     const question11='Mannmuktt offers features like AI-driven therapy suggestions, facial expression recognition, and speech analysis. Which of these features would you find most useful? (Select up to 2)'
     const question12='If Mannmuktt offers its advanced features (e.g., real-time AI support, personalized therapy recommendations, access to therapists), would you be willing to try it?'
-    const question13='If Mannmuktt offers these advanced features, how much would you be willing to pay monthly for full access'
-
+    
 
     try {
         const newQuestionSet = new Questions({
             question1, answer1, question2, answer2,question3, answer3,
             question4, answer4, question5, answer5, question6, answer6,
             question7, answer7, question8, answer8, question9, answer9,
-            question10, answer10,question11, answer11,question12, 
-            answer12,question13, answer13
+            question10, answer10,question11, answer11,question12, answer12
         });
         await newQuestionSet.save();
         res.status(201).json({newQuestionSet,success:true});
